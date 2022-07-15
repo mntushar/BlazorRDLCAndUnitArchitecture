@@ -1,4 +1,4 @@
-namespace BlazorRDLC.Data
+namespace UniversityManagemantSystem.Data
 {
     public class WeatherForecastService
     {

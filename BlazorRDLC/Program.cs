@@ -1,4 +1,4 @@
-using BlazorRDLC.Data;
+using UniversityManagemantSystem.Data;
 using Microsoft.EntityFrameworkCore;
 using Repositories.AppContext;
 
