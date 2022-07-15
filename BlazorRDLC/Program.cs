@@ -1,12 +1,12 @@
 using BlazorRDLC.Data;
 using Microsoft.EntityFrameworkCore;
-using Models.AppDbContext;
+using Repositories.AppContext;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<RdlcDbContext>(options =>
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Models.AppDbContext;
+using Repositories.AppContext;
 using Repositories.IRepositories;
 
 namespace Repositories.Repositrories
 {
-    public class Repositorie<TEntity> : IRepositorie<TEntity> where TEntity : class
+    public abstract class Repositorie<TEntity> : IRepositorie<TEntity> where TEntity : class
     {
-        public readonly RdlcDbContext context;
+        public readonly AppDbContext context;
 
-        public Repositorie(RdlcDbContext context)
+        public Repositorie(AppDbContext context)
         {
             this.context = context;
         }

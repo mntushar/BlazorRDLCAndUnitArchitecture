@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Models;
 
-namespace Models.AppDbContext
+namespace Repositories.AppContext
 {
-    public class RdlcDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<DepartmentModel>? Department { get; set; }
 
-        public RdlcDbContext(DbContextOptions<RdlcDbContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {
         }
